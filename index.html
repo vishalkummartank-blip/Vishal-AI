@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI from GitHub Web</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Canvas Confetti -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+
+    <style>
+        @keyframes gradientMove {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        @keyframes fadeUp {
+            from {
+                opacity: 0;
+                transform: translateY(40px) scale(0.95);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+            }
+        }
+
+        body {
+            background: linear-gradient(
+                -45deg,
+                #4f46e5,
+                #7c3aed,
+                #2563eb,
+                #06b6d4
+            );
+            background-size: 400% 400%;
+            animation: gradientMove 12s ease infinite;
+        }
+
+        .hero-card {
+            animation: fadeUp 1s ease-out;
+            backdrop-filter: blur(18px);
+        }
+    </style>
+</head>
+<body class="min-h-screen flex items-center justify-center p-6">
+
+    <div
+        class="hero-card bg-white/10 border border-white/20 rounded-3xl p-10 md:p-16 text-center shadow-2xl max-w-3xl"
+    >
+        <h1
+            class="text-4xl md:text-7xl font-extrabold text-white mb-4"
+        >
+            Welcome to AI
+        </h1>
+
+        <h2
+            class="text-xl md:text-3xl font-semibold text-cyan-200 mb-6"
+        >
+            from GitHub Web 🚀
+        </h2>
+
+        <p class="text-white/80 text-lg">
+            Modern Tailwind Landing Page with Popper Effect
+        </p>
+
+        <button
+            class="mt-8 px-8 py-3 rounded-full bg-white text-indigo-700 font-bold hover:scale-105 transition duration-300 shadow-lg"
+        >
+            Get Started
+        </button>
+    </div>
+
+    <script>
+        window.addEventListener("load", () => {
+            confetti({
+                particleCount: 250,
+                spread: 180,
+                origin: { y: 0.6 }
+            });
+
+            setTimeout(() => {
+                confetti({
+                    particleCount: 120,
+                    angle: 60,
+                    spread: 80,
+                    origin: { x: 0 }
+                });
+
+                confetti({
+                    particleCount: 120,
+                    angle: 120,
+                    spread: 80,
+                    origin: { x: 1 }
+                });
+            }, 400);
+        });
+    </script>
+
+</body>
+</html>
