@@ -1,21 +1,32 @@
-// Firebase SDK Imports
-import { initializeApp } from "https://www.gstatic.com/firebasejs/11.10.0/firebase-app.js";
-import { getAnalytics } from "https://www.gstatic.com/firebasejs/11.10.0/firebase-analytics.js";
+/* ==========================
+   SUPABASE CONFIGURATION
+========================== */
 
-// Firebase Configuration
+const SUPABASE_URL =
+    "https://nkppscojbtwtofdljjai.supabase.co";
+
+const SUPABASE_KEY =
+    "YOUR_SUPABASE_PUBLISHABLE_KEY";
+
+
+/* ==========================
+   FIREBASE CONFIGURATION
+========================== */
+
 const firebaseConfig = {
-    apiKey: "XXX",
+
+    apiKey: "AIzaSyCnRv2KcjnUiz-dCRIwzoXd_KMt6-pu8_c",
+
     authDomain: "vishal-f0a01.firebaseapp.com",
+
     projectId: "vishal-f0a01",
+
     storageBucket: "vishal-f0a01.firebasestorage.app",
-    messagingSenderId: "XXX",
+
+    messagingSenderId: "1073161731462",
+
     appId: "1:1073161731462:web:24dd8a1cadde0eea1f0007",
-    measurementId: "XXX"
+
+    measurementId: "G-2YJ8YB80PS"
+
 };
-
-// Initialize Firebase
-const app = initializeApp(firebaseConfig);
-const analytics = getAnalytics(app);
-
-// Export so other JavaScript files can use Firebase
-export { app, analytics };
