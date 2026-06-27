@@ -101,6 +101,30 @@ document.addEventListener("DOMContentLoaded", () => {
 // User State
 onAuthStateChanged(auth, user => {
 
-    console.log(user);
+    const info = document.getElementById("user-info");
+    const button = document.getElementById("google-login");
+
+    if (user) {
+
+        info.innerHTML = `
+            Welcome <b>${user.displayName}</b><br>
+            ${user.email}
+        `;
+
+        button.textContent = "Logout";
+
+        button.onclick = window.logout;
+
+    } else {
+
+        info.innerHTML = "";
+
+        button.textContent = "Sign in with Google";
+
+        button.onclick = window.loginGoogle;
+
+    }
+
+});
 
 });
