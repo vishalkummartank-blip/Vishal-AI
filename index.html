@@ -1,78 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Training Portal</title>
+    <title>Welcome to GitHub Training Portal</title>
 
     <!-- Supabase Library -->
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 
-    <!-- Shared Styles -->
+    <!-- Shared CSS -->
     <link rel="stylesheet" href="css/style.css">
+
 </head>
 
 <body>
 
     <!-- Navigation -->
-    <nav>
-        <div class="container nav-container">
+
+    <nav class="navbar">
+
+        <div class="container">
+
             <h2 class="logo">Training Portal</h2>
 
             <ul class="nav-links">
+
                 <li><a href="index.html">Home</a></li>
+
                 <li><a href="about.html">About</a></li>
+
                 <li><a href="contact.html">Contact</a></li>
+
             </ul>
+
         </div>
+
     </nav>
 
-    <!-- Hero Section -->
+    <!-- Hero -->
+
     <header>
 
-        <h1>Welcome to the Training Portal</h1>
+        <h1>Welcome to GitHub Training from Web</h1>
 
         <p>
-            Learn GitHub, AI, Cloud, DevOps and Modern Web Technologies
+            Learn GitHub, DevOps, Cloud and Modern Technologies
         </p>
 
     </header>
 
     <!-- Main Content -->
-    <main class="container">
+
+    <div class="container">
 
         <h2 class="section-title">
+
             Available Training Programs
+
         </h2>
 
         <div id="training-list">
 
             <div class="loading">
+
                 Loading training data...
+
             </div>
 
         </div>
 
-    </main>
+    </div>
 
     <!-- Footer -->
+
     <footer>
 
-        <p>
-            © 2026 Training Portal. All Rights Reserved.
-        </p>
+        © 2026 GitHub Training Portal
 
     </footer>
 
     <!-- Configuration -->
+
     <script src="js/config.js"></script>
 
     <!-- Supabase Logic -->
+
     <script src="js/supabase.js"></script>
 
-    <!-- General Website Logic -->
+    <!-- General JavaScript -->
+
     <script src="js/app.js"></script>
 
 </body>
+
 </html>
