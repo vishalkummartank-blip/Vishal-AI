@@ -87,6 +87,18 @@ window.logout = async () => {
 
 // User State
 
+// Connect the button once the page has loaded
+document.addEventListener("DOMContentLoaded", () => {
+
+    const button = document.getElementById("google-login");
+
+    if (button) {
+        button.addEventListener("click", window.loginGoogle);
+    }
+
+});
+
+// User State
 onAuthStateChanged(auth, user => {
 
     console.log(user);
