@@ -1,1 +1,98 @@
+<!DOCTYPE html>
 
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Training Portal Admin</title>
+
+
+</head>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+<link rel="stylesheet" href="css/style.css">
+<body>
+
+
+
+    <header>
+
+        <h1>Welcome to GitHub Training from Web</h1>
+
+        <p>Learn GitHub, DevOps, Cloud and Modern Technologies</p>
+
+    </header>
+
+
+
+    <div class="container">
+
+
+<div id="auth-section" style="text-align:center; margin:30px 0;">
+
+    <button id="google-login" class="btn">
+        Sign in with Google
+    </button>
+
+    <p id="user-info"></p>
+
+</div>
+<h2 class="section-title">Training Administration</h2>
+
+<button id="add-new" class="btn">
+    Add New Training
+</button>
+
+<div id="add-form" style="display:none; margin:20px 0;">
+
+    <input id="new-title" placeholder="Title"><br><br>
+
+    <textarea id="new-desc"
+        placeholder="Description"></textarea><br><br>
+
+    <input id="new-tech"
+        placeholder="Tech"><br><br>
+
+    <input id="new-link"
+        placeholder="Link"><br><br>
+
+    <button id="save-new" class="btn">
+        Save
+    </button>
+
+</div>
+
+<hr><br>
+
+<div id="admin-list">
+
+    Loading...
+
+</div>
+
+
+
+    </div>
+
+
+
+    <footer>
+
+        © 2026 GitHub Training Portal
+
+    </footer>
+
+
+
+    <script src="js/config.js"></script>
+<script src="js/supabase.js"></script>
+<script src="js/app.js"></script>
+<script type="module" src="firebase-auth.js"></script>
+
+</body>
+
+</html>
