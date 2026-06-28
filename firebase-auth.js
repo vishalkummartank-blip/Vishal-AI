@@ -88,16 +88,31 @@ window.logout = async () => {
 // User State
 
 // Connect the button once the page has loaded
-document.addEventListener("DOMContentLoaded", () => {
+onAuthStateChanged(auth, user => {
 
+    const info = document.getElementById("user-info");
     const button = document.getElementById("google-login");
 
-    if (button) {
-        button.addEventListener("click", window.loginGoogle);
+    if (user) {
+
+        info.innerHTML = `
+            Welcome <b>${user.displayName}</b><br>
+            ${user.email}
+        `;
+
+        button.textContent = "Logout";
+        button.onclick = window.logout;
+
+    } else {
+
+        info.innerHTML = "";
+
+        button.textContent = "Sign in with Google";
+        button.onclick = window.loginGoogle;
+
     }
 
 });
-
 // User State
 onAuthStateChanged(auth, user => {
 
